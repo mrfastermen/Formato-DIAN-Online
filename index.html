@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Formulario DIAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/styleefecto.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<!--cabecera del formulario-->
+			<div class="row clearfix">
+				<div class="col-md-2 column" id="col1">
+					<img src="img/logo.png">
+				</div>
+				<div class="col-md-6 column" id="col2">
+					<h3 id="col2Titulo"><b>Certificado de Ingresos y Retenciones<br>
+						para Personas Naturales Empleados<br>
+						Año Gravable 2013</b>
+					</h3>
+				</div>
+				<div class="col-md-2 column" id="col3">
+					<img src="img/music.png">
+				</div>
+				<div class="col-md-2 column" id="col4">
+					<h1 id="col41"><b>220</b></h1>
+				</div>
+			</div>
+			<!--divs que contenedor de aviso-->
+			<div class="row clearfix">
+				<div class="col-md-6 column" id="col5">
+					<h3 id="instruc">Antes de diligenciar este formulario lea cuidadosamente las instrucciones</h3>
+				</div>
+				<div class="col-md-6 column" id="col6">
+					<h3 class="cuatro autofocus" title="Diligencie en esta casilla el número asignado por la persona natural o jurídica que expide la certificación.">4. Número de formulario</h3>
+					<input type="text" id="cuatrotext" autofocus onkeyUp="return ValidarNumero(this);">
+				</div>
+			</div>
+			<div class="row clearfix">
+				<!--div contenedor de la informacion del retenedor-->
+				<div class="col-md-1 column" id="col7">
+					<h5 id="retenedor"><b>Retenedor</b></h5>
+					<div id="line1"></div>
+					<h5 id="cinco" title="Escriba el Número de Identificación Tributaria asignado al agente retenedor por la DIAN, sin el dígito de verificación, tal como aparece en la casilla 5 de la hoja principal del último Registro Único Tributario (RUT) actualizado. En ningún caso escriba puntos,guiones o letras.">5. Número de Identificación Tributaria (NIT)</h5>
+					<input type="text" id="cincotext1" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext2);">
+					<input type="text" id="cincotext2" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext3);">
+					<input type="text" id="cincotext3" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext4);">
+					<input type="text" id="cincotext4" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext5);">
+					<input type="text" id="cincotext5" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext6);">
+					<input type="text" id="cincotext6" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext7);">
+					<input type="text" id="cincotext7" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext8);">
+					<input type="text" id="cincotext8" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext9);">
+					<input type="text" id="cincotext9" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext10);">
+					<input type="text" id="cincotext10" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext11);">
+					<input type="text" id="cincotext11" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext12);">
+					<input type="text" id="cincotext12" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext13);">
+					<input type="text" id="cincotext13" maxlength="1" onkeyUp="return ValidarNumero(this,cincotext14);">
+					<input type="text" id="cincotext14" maxlength="1" onkeyUp="return ValidarNumero(this,seistext1);">
+					<input type="text" id="seistext1"  maxlength="1" onkeyUp="return ValidarNumero(this,sietetext1);">
+					<input type="text" id="sietetext1" onkeypress="return soloLetras(event);">
+					<input type="text" id="ochotext1" onkeypress="return soloLetras(event);">
+					<input type="text" id="nuevetext1" onkeypress="return soloLetras(event);">
+					<input type="text" id="dieztext1" onkeypress="return soloLetras(event);">
+					<h5 id="seis" title="Escriba el número que en su NIT se encuentra separado, llamado “Dígito de Verificación” (DV), tal como aparece en la casilla 6 de la hoja principal del último (RUT) actualizado.">6. DV.</h5>
+					<h5 id="siete">7. Primer apellido</h5>
+					<h5 id="ocho">8. Segundo apellido</h5>
+					<h5 id="nueve">9. Primer nombre</h5>
+					<h5 id="diez">10. Otros nombres</h5>
+					<div id="line2"></div>
+					<div id="line3"></div>
+					<div id="line4"></div>
+					<div id="line5"></div>
+					<div id="line6"></div>
+					<div id="line7"></div>
+					<div id="line8"></div>
+					<div id="line9"></div>
+					<div id="line10"></div>
+					<div id="line11"></div>
+					<div id="line12"></div>
+					<div id="line13"></div>
+					<div id="line14"></div>
+					<div id="line15"></div>
+					<div id="line16"></div>
+					<div id="line17"></div>
+					<div id="line18"></div>
+					<div id="line19"></div>
+					<div id="line20"></div>
+					<h5 id="once" title="Si es persona jurídica o sociedad de hecho, escriba la razón social completa, la cual debe coincidir con la registrada en la casilla 35 de la hoja principal del último RUT actualizado, si no coincide, actualice el RUT antes de expedir el certificado. Cuando quien emita el certificado sea una persona natural, no debe diligenciar esta casilla.">11. Razón social</h5>
+					<input type="text" id="oncetext1" onkeypress="return soloLetras(event);">
+				</div>
+			</div>
+			<div class="row clearfix">
+				<!--DIV contenedor de la informacion del empleado-->
+				<div class="col-md-12 column" id="col8">
+					<div id="columna8">
+						<h5 id="empl"><b>Empleado</b></h5>
+						<div class="num24">
+							<h5 id="num24">24. Tipo de documento</h5>
+							<select id="num24text1">
+								<option selected="selected" value>Seleccione</option>
+								<option value="1">TI</option>
+								<option value="2">Cc</option>
+								<option value="3">Text.</option>
+								<option value="4">Cext.</option>
+								<option value="5">NIT</option>
+								<option value="6">Pas.</option>
+							</select>
+						</div>
+						<div class="num25">
+							<h5 id="num25">25. Número de Identificación</h5>
+							<input type="text" id="num25text1" maxlength="1" onkeyUp="return ValidarNumero(this,num25text2);">
+							<input type="text" id="num25text2" maxlength="1" onkeyUp="return ValidarNumero(this,num25text3);">
+							<input type="text" id="num25text3" maxlength="1" onkeyUp="return ValidarNumero(this,num25text4);">
+							<input type="text" id="num25text4" maxlength="1" onkeyUp="return ValidarNumero(this,num25text5);">
+							<input type="text" id="num25text5" maxlength="1" onkeyUp="return ValidarNumero(this,num25text6);">
+							<input type="text" id="num25text6" maxlength="1" onkeyUp="return ValidarNumero(this,num25text7);">
+							<input type="text" id="num25text7" maxlength="1" onkeyUp="return ValidarNumero(this,num25text8);">
+							<input type="text" id="num25text8" maxlength="1" onkeyUp="return ValidarNumero(this,num25text9);">
+							<input type="text" id="num25text9" maxlength="1" onkeyUp="return ValidarNumero(this,num25text10);">
+							<input type="text" id="num25text10" maxlength="1" onkeyUp="return ValidarNumero(this,num25text11);">
+							<input type="text" id="num25text11" maxlength="1" onkeyUp="return ValidarNumero(this,num25text12);">
+							<input type="text" id="num25text12" maxlength="1" onkeyUp="return ValidarNumero(this,num25text13);">
+							<input type="text" id="num25text13" maxlength="1" onkeyUp="return ValidarNumero(this,num25text14);">
+							<input type="text" id="num25text14" maxlength="1" onkeyUp="return ValidarNumero(this,num26text1);">
+							<div id="line21"></div>
+							<div id="line22"></div>
+							<div id="line23"></div>
+							<div id="line24"></div>
+							<div id="line25"></div>
+							<div id="line26"></div>
+							<div id="line27"></div>
+							<div id="line28"></div>
+							<div id="line29"></div>
+							<div id="line30"></div>
+							<div id="line31"></div>
+							<div id="line32"></div>
+							<div id="line33"></div>
+						</div>
+						<div class="apnom">
+							<h5 id="apnom">Apellidos y nombres</h5>
+							<input type="text" id="num26text1" placeholder="26. Primer apellido" onkeypress="return soloLetras(event);">
+							<input type="text" id="num27text1" placeholder="27. Segundo apellido" onkeypress="return soloLetras(event);">
+							<input type="text" id="num28text1" placeholder="28. Primer nombre" onkeypress="return soloLetras(event);">
+							<input type="text" id="num29text1" placeholder="29. Otros nombres" onkeypress="return soloLetras(event);">
+							<div id="line34"></div>
+							<div id="line35"></div>
+							<div id="line36"></div>
+						</div>
+						<div class="periodo">
+							<h5 id="periodo" title="Escriba en su orden el año, mes, día, en que inicia el período certificado y en que termina el periodo que se certifica.">Período de la Certificación</h5>
+							<h5 id="num30"><b>30. DE:</b></h5>
+							<div class="anio">
+								<input type="date" id="aniotext1">
+							</div>
+							<h5 id="num31"><b>31. A:</b></h5>
+							<div class="anio2">
+								<input type="date" id="aniotext2">
+							</div>
+						</div>
+						<div class="fechaexp">
+							<h5 id="num32" title="Escriba en su orden año, mes, día de la fecha de expedición del certificado.">32. Fecha de expedición</h5>
+							<div class="anio3">
+								<input type="date" id="aniotext3" onFocus="mostrarFecha();">
+							</div>
+						</div>
+						<div class="lugar">
+							<h5 id="num33" title="Escriba el lugar (Ciudad/municipio) donde efectuó la retención.">33. Lugar donde se practicó la retención</h5>
+							<input type="text" id="num33text1" onkeypress="return soloLetras(event);">
+						</div>
+						<div class="codDep">
+							<h5 id="num34" title="Escriba el código correspondiente al departamento del lugar donde se efectúe la retención, para el efecto, utilice las tablas de Código de departamentos generadas por el DANE. Puede consultar en las cartillas de instrucciones y en nuestra página WEB, en la siguiente dirección: www.dian.gov.co /servicios /formularios /formularios e instructivos">34. Cód. Dpto.</h5>
+							<input type="text" id="num34text1" maxlength="1" onkeyUp="return ValidarNumero(this,num34text2);">
+							<div id="line37"></div>
+							<input type="text" id="num34text2" maxlength="1" onkeyUp="return ValidarNumero(this,num35text1);">
+						</div>
+						<div class="codMun">
+							<h5 id="num35" title="Escriba el código correspondiente a la ciudad / municipio del lugar donde se efectuó la retención. Para el efecto, utilice las tablas de Código de municipio generadas por el DANE. Puede consultar en nuestra página WEB, en la siguiente dirección: www.dian.gov.co /servicios /formularios /formularios e instructivos">35. Cód. Ciudad/ Municipio</h5>
+							<input type="text" id="num35text1" maxlength="1" onkeyUp="return ValidarNumero(this,num35text2);">
+							<div id="line38"></div>
+							<input type="text" id="num35text2" maxlength="1" onkeyUp="return ValidarNumero(this,num35text3);">
+							<div id="line39"></div>
+							<input type="text" id="num35text3" maxlength="1" onkeyUp="return ValidarNumero(this,num37text1);">
+						</div>
+						<div class="num36">
+							<h5 id="num36">36. Número de agencias, sucursales, filiales o subsidiarias de la empresa retenedora cuyos montos de retención se consolidan
+							</h5>
+						</div>
+						<div id="vacio"></div>
+						<div id="vacio2"></div>
+					</div>
+					<!--Etiqueta contenedora de mostar u ocultar concepto de ingresos-->
+					<div class="etiqCptIng">
+						<h5 id="etiqConcepto" onclick="muestra_oculta('conceptIng')"><b>Concepto de los Ingresos</b></h5>
+					</div>
+					<!--div contenedor de concepto de Ing-->
+					<div id="conceptIng">
+						<div class="concepto">
+							<h5 id="concepto"><b>Concepto de los Ingresos</b></h5>
+							<h5 id="num37">Pagos al empleado (No incluya los valores de las casillas 38 a 41)</h5>
+							<h5 id="num38">Cesantías e intereses de cesantías efectivamente pagadas en el período</h5>
+							<h5 id="num39">Gastos de representación</h5>
+							<h5 id="num40">Pensiones de jubilación, vejez o invalidez</h5>
+							<h5 id="num41">Otros ingresos como empleado</h5>
+							<h5 id="num42"><b>Total de ingresos brutos</b> (Sume 37 a 41)</h5>
+						</div>
+						<div class="valor">
+							<h5 id="valor"><b>Valor</b></h5>
+							<h5 id="n37">37</h5>
+							<input type="text" id="num37text1" onkeyUp="return ValidarNumero(this,num38text1);">
+							<h5 id="n38">38</h5>
+							<input type="text" id="num38text1" onkeyUp="return ValidarNumero(this,num39text1);">
+							<h5 id="n39">39</h5>
+							<input type="text" id="num39text1" onkeyUp="return ValidarNumero(this,num40text1);">
+							<h5 id="n40">40</h5>
+							<input type="text" id="num40text1" onkeyUp="return ValidarNumero(this,num41text1);">
+							<h5 id="n41">41</h5>
+							<input type="text" id="num41text1" onkeyUp="return ValidarNumero(this,num42text1);">
+							<h5 id="n42"><b>42</b></h5>
+							<input type="text" id="num42text1" onkeyUp="return ValidarNumero(this,num43text1);">
+							<div id="line40"></div>
+						</div>
+					</div>
+					<!--Etiqueta contenedora de mostar u ocultar concepto de los aportes-->
+					<div class="etiqCptApt">
+						<h5 id="etiqConcepto2" onclick="muestra_oculta('conceptApt')"><b>Concepto de los aportes</b></h5>
+					</div>
+					<!--div contenedor de concepto de los aportes-->
+					<div id="conceptApt">
+						<div class="concepto2">
+							<h5 id="concepto2"><b>Concepto de los aportes</b></h5>
+							<h5 id="num43">Aportes obligatorios por salud</h5>
+							<h5 id="num44">Aportes obligatorios a fondos de pensiones y solidaridad pensional</h5>
+							<h5 id="num45">Aportes voluntarios, a fondos de pensiones y cuentas AFC.</h5>
+							<h5 id="num46"><b>Valor de la retención en la fuente por pagos al empleado</b></h5>
+						</div>
+						<div class="valor2">
+							<h5 id="valor2"><b>Valor</b></h5>
+							<h5 id="n43">43</h5>
+							<input type="text" id="num43text1" onkeyUp="return ValidarNumero(this,num44text1);">
+							<h5 id="n44">44</h5>
+							<input type="text" id="num44text1" onkeyUp="return ValidarNumero(this,num45text1);">
+							<h5 id="n45">45</h5>
+							<input type="text" id="num45text1" onkeyUp="return ValidarNumero(this,num46text1);">
+							<h5 id="n46">46</h5>
+							<input type="text" id="num46text1" onkeyUp="return ValidarNumero(this,nompagtext1);">
+							<div id="line41"></div>
+							<div id="line42"></div>
+						</div>
+						<div class="nompag">
+							<h5 id="nompag">Nombre del pagador o agente retenedor</h5>
+							<input type="text" id="nompagtext1" onkeypress="return soloLetras(event);">
+						</div>
+					</div>
+					<!--Etiqueta contenedora de mostar u ocultar datos a cargo del empleado-->
+					<div class="datos">
+						<h5 id="datos" onclick="muestra_oculta('datosEmp')"><b>Datos a cargo del empleado</b></h5>
+					</div>
+					<!--div contenedor de datos a cargo del empleado-->
+					<div id="datosEmp">
+						<div class="datcpt">
+							<h5 id="cptingreso"><b>Concepto de otros ingresos</b></h5>
+						</div>
+						<div class="valrec">
+							<h5 id="valrec"><b>Valor recibido</b></h5>
+						</div>
+						<div class="valret">
+							<h5 id="valret"><b>Valor retenido</b></h5>
+						</div>
+						<div class="cptingresos2">
+							<h5 id="num47">Arrendamientos</h5>
+							<h5 id="num48">Honorarios, comisiones y servicios</h5>
+							<h5 id="num49">Intereses y rendimientos financieros</h5>
+							<h5 id="num50">Enajenación de activos fijos</h5>
+							<h5 id="num51">Loterías, rifas, apuestas y similares</h5>
+							<h5 id="num52">Otros</h5>
+							<h5 id="num53"><b>Totales:</b> (<b>Valor recibido:</b> Sume 47 a 52), (<b>Valor retenido:</b> Sume 54 a 59)</h5>
+							<h5 id="totalret"><b>Total retenciones año gravable 2013</b> (Sume 46 + 60)</h5>
+							<div class="valrec2">
+								<h5 id="n47">47</h5>
+								<input type="text" id="num47text1" onkeyUp="return ValidarNumero(this,num48text1);">
+								<h5 id="n48">48</h5>
+								<input type="text" id="num48text1" onkeyUp="return ValidarNumero(this,num49text1);">
+								<h5 id="n49">49</h5>
+								<input type="text" id="num49text1" onkeyUp="return ValidarNumero(this,num50text1);">
+								<h5 id="n50">50</h5>
+								<input type="text" id="num50text1" onkeyUp="return ValidarNumero(this,num51text1);">
+								<h5 id="n51">51</h5>
+								<input type="text" id="num51text1" onkeyUp="return ValidarNumero(this,num52text1);">
+								<h5 id="n52">52</h5>
+								<input type="text" id="num52text1" onkeyUp="return ValidarNumero(this,num53text1);">
+								<h5 id="n53"><b>53</b></h5>
+								<input type="text" id="num53text1" onkeyUp="return ValidarNumero(this,num54text1);">
+								<div id="line43"></div>
+							</div>
+						</div>
+						<div class="valret2">
+							<input type="text" id="num54text1" onkeyUp="return ValidarNumero(this,num55text1);">
+							<h5 id="n54">54</h5>
+							<input type="text" id="num55text1" onkeyUp="return ValidarNumero(this,num56text1);">
+							<h5 id="n55">55</h5>
+							<input type="text" id="num56text1" onkeyUp="return ValidarNumero(this,num57text1);">
+							<h5 id="n56">56</h5>
+							<input type="text" id="num57text1" onkeyUp="return ValidarNumero(this,num58text1);">
+							<h5 id="n57">57</h5>
+							<input type="text" id="num58text1" onkeyUp="return ValidarNumero(this,num59text1);">
+							<h5 id="n58">58</h5>
+							<input type="text" id="num59text1" onkeyUp="return ValidarNumero(this,num60text1);">
+							<h5 id="n59">59</h5>
+							<input type="text" id="num60text1" onkeyUp="return ValidarNumero(this,num61text1);">
+							<h5 id="n60">60</h5>
+							<input type="text" id="num61text1" onkeyUp="return ValidarNumero(this,item1text1);">
+							<h5 id="n61"><b>61</b></h5>
+							<div id="line44"></div>
+						</div>
+						<div class="item">
+							<h5 id="item"><b>Item</b></h5>
+							<h5 id="item1"><b>1</b></h5>
+							<h5 id="item2"><b>2</b></h5>
+							<h5 id="item3"><b>3</b></h5>
+							<h5 id="item4"><b>4</b></h5>
+							<h5 id="item5"><b>5</b></h5>
+							<h5 id="item6"><b>6</b></h5>
+							<h5 id="item7"><b>7</b></h5>
+							<h5 id="item8"><b>8</b></h5>
+						</div>
+						<div class="ident">
+							<h5 id="num62"><b>62. Identificación de los bienes poseídos</b></h5>
+							<input type="text" id="item1text1">
+							<input type="text" id="item2text1">
+							<input type="text" id="item3text1">
+							<input type="text" id="item4text1">
+							<input type="text" id="item5text1">
+							<input type="text" id="item6text1">
+							<input type="text" id="item7text1">
+							<input type="text" id="item8text1">
+						</div>
+						<div class="valpat">
+							<h5 id="num63"><b>63. Valor Patrimonial</b></h5>
+							<input type="text" id="it1text1" onkeyUp="return ValidarNumero(this,it2text1);">
+							<input type="text" id="it2text1" onkeyUp="return ValidarNumero(this,it3text1);">
+							<input type="text" id="it3text1" onkeyUp="return ValidarNumero(this,it4text1);">
+							<input type="text" id="it4text1" onkeyUp="return ValidarNumero(this,it5text1);">
+							<input type="text" id="it5text1" onkeyUp="return ValidarNumero(this,it6text1);">
+							<input type="text" id="it6text1" onkeyUp="return ValidarNumero(this,it7text1);">
+							<input type="text" id="it7text1" onkeyUp="return ValidarNumero(this,it8text1);">
+							<input type="text" id="it8text1" onkeyUp="return ValidarNumero(this,num64text1);">
+						</div>
+						<div class="deudasvi">
+							<h5 id="deudasvi"><b>Deudas vigentes a 31 de Diciembre de 2013</b></h5>
+						</div>
+						<div class="num64">64</div>
+						<div class="n64">
+							<input type="text" id="num64text1" onkeyUp="return ValidarNumero(this,i1text1);">
+						</div>
+					</div>
+					<!--Etiqueta contenedora de mostar u ocultar identificacion de las personas-->
+					<div class="identper">
+						<h5 id="identper" onclick="muestra_oculta('idetPerDep')"><b>Identificación de las personas dependientes de acuerdo al parágrafo 2 del artículo 387 del Estatuto Tributario</b></h5>
+					</div>
+					<!--div contenedor de identificador de las personas-->
+					<div id="idetPerDep">
+						<div class="item2">
+							<h5 id="ite2"><b>Item</b></h5>
+							<h5 id="it1"><b>1</b></h5>
+							<h5 id="it2"><b>2</b></h5>
+							<h5 id="it3"><b>3</b></h5>
+							<h5 id="it4"><b>4</b></h5>
+						</div>
+						<div class="num65">
+							<h5 id="num65"><b>65. C.C. o NIT</b></h5>
+							<input type="text" id="i1text1" onkeyUp="return ValidarNumero(this,i5text1);">
+							<input type="text" id="i2text1" onkeyUp="return ValidarNumero(this,i6text1);">
+							<input type="text" id="i3text1" onkeyUp="return ValidarNumero(this,i7text1);">
+							<input type="text" id="i4text1" onkeyUp="return ValidarNumero(this,i8text1);">
+						</div>
+						<div class="num66">
+							<h5 id="num66"><b>66. Apellidos y Nombres</b></h5>
+							<input type="text" id="i5text1" onkeypress="return soloLetras(event);">
+							<input type="text" id="i6text1" onkeypress="return soloLetras(event);">
+							<input type="text" id="i7text1" onkeypress="return soloLetras(event);">
+							<input type="text" id="i8text1" onkeypress="return soloLetras(event);">
+						</div>
+						<div class="num67">
+							<h5 id="num67"><b>67. Parentesco</b></h5>
+							<input type="text" id="i9text1" onkeypress="return soloLetras(event);">
+							<input type="text" id="i10text1" onkeypress="return soloLetras(event);">
+							<input type="text" id="i11text1" onkeypress="return soloLetras(event);">
+							<input type="text" id="i12text1" onkeypress="return soloLetras(event);">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<!--div contenesor del pie de pagina-->
+				<div class="col-md-1 column" id="col9">
+					<p id="certifico">Certifico que durante el año gravable de 2013:<br>
+						1. Mi patrimonio bruto era igual o inferior a cuatro mil quinientas (4.500) UVT ($120.785.000).<br>
+						2. No fui responsable del impuesto sobre las ventas.<br>
+						3. Mis ingresos brutos fueron inferiores a mil cuatrocientas (1.400) UVT ($37.577.000).<br>
+						4. Mis consumos mediante tarjeta de crédito no excedieron la suma de dos mil ochocientas (2.800) UVT ($75.155.000).<br>
+						5. Que el total de mis compras y consumos no superaron la suma de dos mil ochocientas (2.800) UVT ($75.155.000).<br>
+						6. Que el valor total de mis consignaciones bancarias, depósitos o inversiones financieras no excedieron los cuatro mil quinientas (4.500) UVT<br>($120.785.000). Por lo tanto, manifiesto que no estoy obligado a presentar declaración de renta y complementarios por el año gravable 2013.
+					</p>
+					<div id="line48"></div>
+					<h5 id="firma">Firma del empleado</h5>
+					<div class="firma">
+						<input type="text" id = "fir" maxlength="17">
+					</div>
+				</div>
+			</div>
+			<h5 id="note">NOTA: Este certificado sustituye para todos los efectos legales la declaración de Renta y Complementarios para el empleado que lo firme.</h5>
+		</div>
+	</div>
+	<!--boton de guardar y mostrar un mensaje al usuario-->
+	<input type="submit" value="Guardar" id= "guardar" onClick="guardar();">
+</body>
+</html>
